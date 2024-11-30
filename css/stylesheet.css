@@ -1,3 +1,6 @@
+body{
+  background-image: url('../nick-fewings.jpg');
+}
 #header {
     font-size: 28px;
     padding: 5px;
@@ -6,16 +9,18 @@
 }
 
 #menu {
+   
+    display: flex;
     margin: 0;
     padding: 0;
-    width: 150px;
-    background-color: #f1f1f1;
-    position: fixed;
+    background-color: #f1f1f1;;
     height: 100%;
     overflow: auto;
+    justify-content: center;
 }
 
 #menu a {
+    float: left;
     display: block;
     color: black;
     padding: 16px;
@@ -33,14 +38,11 @@
 }
 
 #container{
-    margin-left: 25%;
+   padding: 2%; 
+   margin-left: 5%;
     
 }
 
-body {
-background: white;
-padding: 2.5%;
-}
 .img-list {
 list-style: none;
 padding: 0;
@@ -109,4 +111,39 @@ transform: scale(0);
 .img-list li:hover:after {
 opacity: .35;
 transform: scale(1);
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* about pagination */
+#pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+
+}
+
+#pagination-container button {
+  margin: 0 10px; /* Add space between buttons */
+  padding: 10px 15px; /* Add padding to buttons */
+  background-color: #007bff; /* Button background color */
+  color: white; /* Text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+
+#pagination-container button:disabled {
+  background-color: #ccc; /* Grey out disabled buttons */
+  cursor: not-allowed; /* Change cursor for disabled */
+}
+
+
+#pagination-container button:hover:not(:disabled) {
+  background-color: #0056b3; /* Darker blue on hover */
 }

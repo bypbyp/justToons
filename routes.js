@@ -8,8 +8,12 @@ export default {
         path: '',
         controller: ''
     },
-    simpsons: {
-        path: '/simpsons',
-        controller:'simpsonsController'
+    rickMorty: {
+        path: '/rickMorty',
+        controller:'rickMortyController'
+    },
+    singleCharacter: {
+        path:'/c/\[0-9]+',
+        controller: 'singleController'
     }
 };
